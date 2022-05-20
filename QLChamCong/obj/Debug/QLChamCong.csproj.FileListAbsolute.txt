@@ -1,0 +1,12 @@
+D:\Code\Project\Các phương pháp pt pm nhanh\QLChamCong\QLChamCong\bin\Debug\QLChamCong.exe.config
+D:\Code\Project\Các phương pháp pt pm nhanh\QLChamCong\QLChamCong\bin\Debug\QLChamCong.exe
+D:\Code\Project\Các phương pháp pt pm nhanh\QLChamCong\QLChamCong\bin\Debug\QLChamCong.pdb
+D:\Code\Project\Các phương pháp pt pm nhanh\QLChamCong\QLChamCong\obj\Debug\QLChamCong.csproj.AssemblyReference.cache
+D:\Code\Project\Các phương pháp pt pm nhanh\QLChamCong\QLChamCong\obj\Debug\QLChamCong.Properties.Resources.resources
+D:\Code\Project\Các phương pháp pt pm nhanh\QLChamCong\QLChamCong\obj\Debug\QLChamCong.csproj.GenerateResource.cache
+D:\Code\Project\Các phương pháp pt pm nhanh\QLChamCong\QLChamCong\obj\Debug\QLChamCong.csproj.CoreCompileInputs.cache
+D:\Code\Project\Các phương pháp pt pm nhanh\QLChamCong\QLChamCong\obj\Debug\QLChamCong.exe
+D:\Code\Project\Các phương pháp pt pm nhanh\QLChamCong\QLChamCong\obj\Debug\QLChamCong.pdb
+D:\Code\Project\Các phương pháp pt pm nhanh\QLChamCong\QLChamCong\obj\Debug\QLChamCong.fDangNhap.resources
+D:\Code\Project\Các phương pháp pt pm nhanh\QLChamCong\QLChamCong\obj\Debug\QLChamCong.Control.ctTextBox.resources
+D:\Code\Project\Các phương pháp pt pm nhanh\QLChamCong\QLChamCong\obj\Debug\QLChamCong.fHomePageA.resources

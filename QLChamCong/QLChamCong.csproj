@@ -61,11 +61,17 @@
     <Compile Include="fDangNhap.Designer.cs">
       <DependentUpon>fDangNhap.cs</DependentUpon>
     </Compile>
-    <Compile Include="HomePage.cs">
+    <Compile Include="fHomePageA.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="HomePage.Designer.cs">
-      <DependentUpon>HomePage.cs</DependentUpon>
+    <Compile Include="fHomePageA.Designer.cs">
+      <DependentUpon>fHomePageA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fQLNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fQLNhanVien.Designer.cs">
+      <DependentUpon>fQLNhanVien.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -75,8 +81,8 @@
     <EmbeddedResource Include="fDangNhap.resx">
       <DependentUpon>fDangNhap.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HomePage.resx">
-      <DependentUpon>HomePage.cs</DependentUpon>
+    <EmbeddedResource Include="fHomePageA.resx">
+      <DependentUpon>fHomePageA.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -115,6 +121,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Security-Key-Security-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\schedule.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\qlcc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\qlcc1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icQlcc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icQlnv.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icTinhLuong.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icReport.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

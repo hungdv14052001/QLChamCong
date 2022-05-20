@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace QLChamCong
 {
-    public partial class HomePage : Form
+    public partial class fHomePageA : Form
     {
-        public HomePage()
+        public fHomePageA()
         {
             InitializeComponent();
         }
