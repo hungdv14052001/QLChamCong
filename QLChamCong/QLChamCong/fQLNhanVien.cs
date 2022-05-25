@@ -20,12 +20,20 @@ namespace QLChamCong
         {
             InitializeComponent();
             listNV = dao.getListNV();
+            loadBangNV();
 
         }
         private void lb_Click(object sender, EventArgs e)
         {
             var lb = sender as Label;
-            label1.Text = lb.Tag.ToString() ; 
+            List<Label> listlb = this.pnBangNV.Controls.OfType<Label>().ToList();
+            foreach(Label l in listlb)
+            {
+                if (lb.Tag.Equals(l.Tag))
+                {
+                    l.BackColor = Color.FromArgb(92, 153, 215);
+                }
+            }
         }
         private Label setLb(string Tag, string Text, int w, int h, int x, int y)
         {
@@ -81,11 +89,6 @@ namespace QLChamCong
         private void fQLNhanVien_Load(object sender, EventArgs e)
         {
 
-        }
-
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            loadBangNV();
         }
     }
 }

@@ -13,7 +13,7 @@ namespace QLChamCong
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new fQLNhanVien());
+            Application.Run(new fHomePageA());
         }
     }
 }
