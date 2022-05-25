@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\DAO.cs" />
     <Compile Include="Control\ctButton.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -73,6 +74,7 @@
     <Compile Include="fQLNhanVien.Designer.cs">
       <DependentUpon>fQLNhanVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\NhanVien.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Control\ctTextBox.resx">
@@ -83,6 +85,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fHomePageA.resx">
       <DependentUpon>fHomePageA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fQLNhanVien.resx">
+      <DependentUpon>fQLNhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

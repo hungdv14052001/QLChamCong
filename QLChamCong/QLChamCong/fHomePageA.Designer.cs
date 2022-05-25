@@ -30,6 +30,7 @@ namespace QLChamCong
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button5 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -45,6 +46,7 @@ namespace QLChamCong
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(55)))), ((int)(((byte)(61)))));
+            this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.button3);
@@ -55,6 +57,23 @@ namespace QLChamCong
             this.panel1.Size = new System.Drawing.Size(288, 878);
             this.panel1.TabIndex = 0;
             // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(55)))), ((int)(((byte)(61)))));
+            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(138)))), ((int)(((byte)(151)))));
+            this.button5.Image = global::QLChamCong.Properties.Resources.icQlcc;
+            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button5.Location = new System.Drawing.Point(3, 6);
+            this.button5.Name = "button5";
+            this.button5.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.button5.Size = new System.Drawing.Size(288, 56);
+            this.button5.TabIndex = 4;
+            this.button5.Text = "Chấm Công";
+            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button5.UseVisualStyleBackColor = false;
+            // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(55)))), ((int)(((byte)(61)))));
@@ -63,7 +82,7 @@ namespace QLChamCong
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(138)))), ((int)(((byte)(151)))));
             this.button2.Image = global::QLChamCong.Properties.Resources.icQlnv;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.Location = new System.Drawing.Point(0, 117);
+            this.button2.Location = new System.Drawing.Point(3, 130);
             this.button2.Name = "button2";
             this.button2.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.button2.Size = new System.Drawing.Size(288, 56);
@@ -80,7 +99,7 @@ namespace QLChamCong
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(138)))), ((int)(((byte)(151)))));
             this.button1.Image = global::QLChamCong.Properties.Resources.icQlcc;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.Location = new System.Drawing.Point(0, 39);
+            this.button1.Location = new System.Drawing.Point(3, 68);
             this.button1.Name = "button1";
             this.button1.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.button1.Size = new System.Drawing.Size(288, 56);
@@ -97,7 +116,7 @@ namespace QLChamCong
             this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(138)))), ((int)(((byte)(151)))));
             this.button3.Image = global::QLChamCong.Properties.Resources.icTinhLuong;
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button3.Location = new System.Drawing.Point(0, 198);
+            this.button3.Location = new System.Drawing.Point(3, 192);
             this.button3.Name = "button3";
             this.button3.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.button3.Size = new System.Drawing.Size(288, 56);
@@ -114,7 +133,7 @@ namespace QLChamCong
             this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(138)))), ((int)(((byte)(151)))));
             this.button4.Image = global::QLChamCong.Properties.Resources.icReport;
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button4.Location = new System.Drawing.Point(0, 278);
+            this.button4.Location = new System.Drawing.Point(3, 254);
             this.button4.Name = "button4";
             this.button4.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.button4.Size = new System.Drawing.Size(288, 56);
@@ -186,5 +205,6 @@ namespace QLChamCong
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Button button5;
     }
 }

@@ -10,3 +10,4 @@ D:\Code\Project\Các phương pháp pt pm nhanh\QLChamCong\QLChamCong\obj\Debug\
 D:\Code\Project\Các phương pháp pt pm nhanh\QLChamCong\QLChamCong\obj\Debug\QLChamCong.fDangNhap.resources
 D:\Code\Project\Các phương pháp pt pm nhanh\QLChamCong\QLChamCong\obj\Debug\QLChamCong.Control.ctTextBox.resources
 D:\Code\Project\Các phương pháp pt pm nhanh\QLChamCong\QLChamCong\obj\Debug\QLChamCong.fHomePageA.resources
+D:\Code\Project\Các phương pháp pt pm nhanh\QLChamCong\QLChamCong\obj\Debug\QLChamCong.fQLNhanVien.resources
