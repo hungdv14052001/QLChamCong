@@ -28,6 +28,8 @@ namespace QLChamCong
         }
         public void dongtrc()
         {
+            pc.Hide();
+            lb.Hide();
             foreach(Form x in listform)
             {
                 x.Hide();

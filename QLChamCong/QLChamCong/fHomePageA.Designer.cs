@@ -33,14 +33,19 @@ namespace QLChamCong
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pnView = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button5 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pc = new System.Windows.Forms.PictureBox();
+            this.lb = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pnView.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pc)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -60,9 +65,9 @@ namespace QLChamCong
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(212)))), ((int)(((byte)(106)))));
-            this.panel2.Location = new System.Drawing.Point(2, 1);
+            this.panel2.Location = new System.Drawing.Point(296, 1);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(288, 123);
+            this.panel2.Size = new System.Drawing.Size(1334, 123);
             this.panel2.TabIndex = 1;
             // 
             // panel3
@@ -75,20 +80,23 @@ namespace QLChamCong
             // 
             // pnView
             // 
-            this.pnView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.pnView.BackColor = System.Drawing.Color.White;
+            this.pnView.Controls.Add(this.lb);
+            this.pnView.Controls.Add(this.pc);
             this.pnView.Location = new System.Drawing.Point(296, 132);
             this.pnView.Name = "pnView";
             this.pnView.Size = new System.Drawing.Size(1334, 860);
             this.pnView.TabIndex = 4;
             // 
-            // pictureBox1
+            // pictureBox2
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.pictureBox1.Location = new System.Drawing.Point(1551, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(75, 100);
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
+            this.pictureBox2.Image = global::QLChamCong.Properties.Resources.Logo1;
+            this.pictureBox2.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(110, 100);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
             // 
             // button5
             // 
@@ -176,14 +184,47 @@ namespace QLChamCong
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button4.UseVisualStyleBackColor = false;
             // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(79)))), ((int)(((byte)(79)))));
+            this.label1.Location = new System.Drawing.Point(128, 12);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(165, 100);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Admin";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // pc
+            // 
+            this.pc.Image = global::QLChamCong.Properties.Resources.Logo1;
+            this.pc.Location = new System.Drawing.Point(558, 167);
+            this.pc.Name = "pc";
+            this.pc.Size = new System.Drawing.Size(220, 200);
+            this.pc.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pc.TabIndex = 6;
+            this.pc.TabStop = false;
+            // 
+            // lb
+            // 
+            this.lb.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(79)))), ((int)(((byte)(79)))));
+            this.lb.Location = new System.Drawing.Point(4, 343);
+            this.lb.Name = "lb";
+            this.lb.Size = new System.Drawing.Size(1328, 100);
+            this.lb.TabIndex = 6;
+            this.lb.Text = "PHẦN MỀM QUẢN LÝ CHẤM CÔNG";
+            this.lb.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // fHomePageA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(244)))), ((int)(((byte)(248)))));
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1637, 1003);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.pnView);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -192,7 +233,9 @@ namespace QLChamCong
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HomePage";
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.pnView.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pc)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -206,8 +249,11 @@ namespace QLChamCong
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel pnView;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label lb;
+        private System.Windows.Forms.PictureBox pc;
+        private System.Windows.Forms.Label label1;
     }
 }

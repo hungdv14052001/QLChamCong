@@ -7,6 +7,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Collections;
 using QLChamCong.Model;
+using System.Text.RegularExpressions;
 
 namespace QLChamCong.Controller
 {
@@ -55,6 +56,62 @@ namespace QLChamCong.Controller
                 listNV.Add(nv);
             }
             return listNV;
+        }
+        public string ConvertToUnSign(string text)
+        {
+            for (int i = 33; i < 48; i++)
+            {
+                text = text.Replace(((char)i).ToString(), "");
+            }
+
+            for (int i = 58; i < 65; i++)
+            {
+                text = text.Replace(((char)i).ToString(), "");
+            }
+
+            for (int i = 91; i < 97; i++)
+            {
+                text = text.Replace(((char)i).ToString(), "");
+            }
+            for (int i = 123; i < 127; i++)
+            {
+                text = text.Replace(((char)i).ToString(), "");
+            }
+            text = text.Replace(" ", "");
+            Regex regex = new Regex(@"\p{IsCombiningDiacriticalMarks}+");
+            string strFormD = text.Normalize(System.Text.NormalizationForm.FormD);
+            return regex.Replace(strFormD, String.Empty).Replace('\u0111', 'd').Replace('\u0110', 'D');
+        }
+        public bool addNhanVien(NhanVien nv, int CV, int PB)
+        {
+            try
+            {
+                com = con.CreateCommand();
+                com.CommandText = "insert into tblTaiKhoan(Username,Password) values('" + ConvertToUnSign(nv.TenNV) + nv.MaNV + "','" + nv.Cccd + "'); " +
+                    " insert into tblNhanVien(TenNV, CCCD, NgaySinh, GioiTinh, DiaChi, MaPB, MaCV, MaTK, HSLuong, HinhAnh) " +
+                    "values('" + nv.TenNV + "', '" + nv.Cccd + "', '" + nv.NgaySinh.ToString("MM-dd-yyyy") + "', '" + nv.GioiTinh + "', '" + nv.DiaChi + "', " + PB + ", " + CV + ", " + nv.MaNV + ", 1.0, '" + nv.HinhAnh + "')";
+                com.ExecuteNonQuery();
+                return true;
+            }
+            catch(Exception exp)
+            {
+                return false;
+            }
+        }
+        public bool delNhanVien(NhanVien nv)
+        {
+            try
+            {
+                com = con.CreateCommand();
+                com.CommandText = "delete from tblNhanVien where MaNV="+nv.MaNV+"; " +
+                    "delete from tblTaiKhoan where MaTK=" + nv.MaNV + ";  ";
+                com.ExecuteNonQuery();
+                return true;
+            }
+            catch (Exception exp)
+            {
+                return false;
+            }
         }
     }
 }
