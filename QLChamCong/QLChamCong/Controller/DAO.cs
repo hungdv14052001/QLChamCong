@@ -89,7 +89,7 @@ namespace QLChamCong.Controller
                 com = con.CreateCommand();
                 com.CommandText = "insert into tblTaiKhoan(Username,Password) values('" + ConvertToUnSign(nv.TenNV) + nv.MaNV + "','" + nv.Cccd + "'); " +
                     " insert into tblNhanVien(TenNV, CCCD, NgaySinh, GioiTinh, DiaChi, MaPB, MaCV, MaTK, HSLuong, HinhAnh) " +
-                    "values('" + nv.TenNV + "', '" + nv.Cccd + "', '" + nv.NgaySinh.ToString("MM-dd-yyyy") + "', '" + nv.GioiTinh + "', '" + nv.DiaChi + "', " + PB + ", " + CV + ", " + nv.MaNV + ", 1.0, '" + nv.HinhAnh + "')";
+                    "values(N'" + nv.TenNV + "', '" + nv.Cccd + "', '" + nv.NgaySinh.ToString("MM-dd-yyyy") + "', '" + nv.GioiTinh + "', N'" + nv.DiaChi + "', " + PB + ", " + CV + ", " + nv.MaNV + ", 1.0, '" + nv.HinhAnh + "')";
                 com.ExecuteNonQuery();
                 return true;
             }
@@ -98,13 +98,27 @@ namespace QLChamCong.Controller
                 return false;
             }
         }
-        public bool delNhanVien(NhanVien nv)
+        public bool delNhanVien(int MaNV)
         {
             try
             {
                 com = con.CreateCommand();
-                com.CommandText = "delete from tblNhanVien where MaNV="+nv.MaNV+"; " +
-                    "delete from tblTaiKhoan where MaTK=" + nv.MaNV + ";  ";
+                com.CommandText = "delete from tblNhanVien where MaNV="+MaNV+"; " +
+                    "delete from tblTaiKhoan where MaTK=" + MaNV + ";  ";
+                com.ExecuteNonQuery();
+                return true;
+            }
+            catch (Exception exp)
+            {
+                return false;
+            }
+        }
+        public bool updateNV(NhanVien nv, int CV, int PB)
+        {
+            try
+            {
+                com = con.CreateCommand();
+                com.CommandText = "update tblNhanVien set TenNV=N'"+nv.TenNV+"', CCCD= '"+nv.Cccd+"', NgaySinh= '"+ nv.NgaySinh.ToString("MM-dd-yyyy") + "', DiaChi= N'"+nv.DiaChi+"', MaCV="+CV+", MaPB="+PB+", HSLuong="+nv.HsLuong+" where MaNV="+nv.MaNV+" ;";
                 com.ExecuteNonQuery();
                 return true;
             }

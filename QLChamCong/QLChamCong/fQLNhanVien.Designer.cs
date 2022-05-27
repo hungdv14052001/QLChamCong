@@ -58,13 +58,14 @@ namespace QLChamCong
             this.cbPB = new System.Windows.Forms.ComboBox();
             this.cbCV = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.txtHSL = new System.Windows.Forms.TextBox();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.pbHA = new System.Windows.Forms.PictureBox();
-            this.txtHSL = new System.Windows.Forms.TextBox();
+            this.lbFileName = new System.Windows.Forms.Label();
             this.pnBangNV.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbHA)).BeginInit();
             this.SuspendLayout();
@@ -388,13 +389,21 @@ namespace QLChamCong
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(1030, 288);
+            this.button1.Location = new System.Drawing.Point(1030, 312);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 28);
             this.button1.TabIndex = 29;
             this.button1.Text = "browser";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // txtHSL
+            // 
+            this.txtHSL.Location = new System.Drawing.Point(652, 153);
+            this.txtHSL.Multiline = true;
+            this.txtHSL.Name = "txtHSL";
+            this.txtHSL.Size = new System.Drawing.Size(269, 30);
+            this.txtHSL.TabIndex = 35;
             // 
             // button6
             // 
@@ -423,6 +432,7 @@ namespace QLChamCong
             this.button5.TabIndex = 33;
             this.button5.Text = "Sửa";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button4
             // 
@@ -436,6 +446,7 @@ namespace QLChamCong
             this.button4.TabIndex = 32;
             this.button4.Text = "Lưu";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -449,6 +460,7 @@ namespace QLChamCong
             this.button3.TabIndex = 31;
             this.button3.Text = "Xóa";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -463,6 +475,7 @@ namespace QLChamCong
             this.button2.Text = "Thêm Mới";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // pbHA
             // 
@@ -474,13 +487,13 @@ namespace QLChamCong
             this.pbHA.TabIndex = 28;
             this.pbHA.TabStop = false;
             // 
-            // txtHSL
+            // lbFileName
             // 
-            this.txtHSL.Location = new System.Drawing.Point(652, 153);
-            this.txtHSL.Multiline = true;
-            this.txtHSL.Name = "txtHSL";
-            this.txtHSL.Size = new System.Drawing.Size(269, 30);
-            this.txtHSL.TabIndex = 35;
+            this.lbFileName.Location = new System.Drawing.Point(990, 289);
+            this.lbFileName.Name = "lbFileName";
+            this.lbFileName.Size = new System.Drawing.Size(150, 23);
+            this.lbFileName.TabIndex = 36;
+            this.lbFileName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // fQLNhanVien
             // 
@@ -488,6 +501,7 @@ namespace QLChamCong
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(153)))), ((int)(((byte)(215)))));
             this.ClientSize = new System.Drawing.Size(1312, 813);
+            this.Controls.Add(this.lbFileName);
             this.Controls.Add(this.txtHSL);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
@@ -563,5 +577,6 @@ namespace QLChamCong
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.TextBox txtHSL;
+        private System.Windows.Forms.Label lbFileName;
     }
 }

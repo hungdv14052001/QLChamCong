@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data;
 using System.Data.SqlClient;
+using System.IO;
 
 namespace QLChamCong
 {
@@ -66,6 +67,7 @@ namespace QLChamCong
                     txtCCCD.Text = nv.Cccd;
                     txtDiaChi.Text = nv.DiaChi;
                     txtHSL.Text = nv.HsLuong.ToString();
+                    dtNS.Value = nv.NgaySinh;
                     cbCV.SelectedItem = nv.ChucVu;
                     cbGT.SelectedItem = nv.GioiTinh;
                     cbPB.SelectedItem = nv.PhongBan;
@@ -75,7 +77,7 @@ namespace QLChamCong
                     }
                     catch(Exception exp)
                     {
-
+                        pbHA.Image = Properties.Resources.User_Administrator_Blue_icon;
                     }
                     
                 }
@@ -133,6 +135,17 @@ namespace QLChamCong
                 return "Nữ";
             }
         }
+        public bool returnGT(string GT)
+        {
+            if (GT.Equals("Nam"))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
         private void fQLNhanVien_Load(object sender, EventArgs e)
         {
             loadCB();
@@ -167,7 +180,17 @@ namespace QLChamCong
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+            // open file dialog   
+            OpenFileDialog open = new OpenFileDialog();
+            // image filters  
+            open.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp)|*.jpg; *.jpeg; *.gif; *.bmp";
+            if (open.ShowDialog() == DialogResult.OK)
+            {
+                // display image in picture box  
+                pbHA.Image = new Bitmap(open.FileName);
+                // image file path  
+                lbFileName.Text = open.FileName;
+            }
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -195,6 +218,170 @@ namespace QLChamCong
             cbCV.SelectedIndex = 0;
             cbGT.SelectedIndex = 0;
             cbPB.SelectedIndex = 0;
+            lbFileName.Text = "";
+            pbHA.Image = Properties.Resources.User_Administrator_Blue_icon;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            reset();
+            txtMaNV.Enabled = false;
+            txtMaNV.Text = getNewMaV().ToString();
+        }
+        public int getNewMaV()
+        {
+            com = con.CreateCommand();
+            com.CommandText = "select Max(MaNV) as newMaNV from tblNhanVien";
+            dad.SelectCommand = com;
+            DataTable dt = new DataTable();
+            dad.Fill(dt);
+            int kq = 0;
+            foreach(DataRow r in dt.Rows)
+            {
+                kq = int.Parse(r["newMaNV"].ToString());
+            }
+            kq ++;
+            return kq;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (txtMaNV.Enabled)
+            {
+                MessageBox.Show("Vui lòng thêm mới trước khi lưu");
+                return;
+            }
+            string MaNV = txtMaNV.Text;
+            string TenNV = txtTenNV.Text;
+            string Cccd = txtCCCD.Text;
+            DateTime NS = dtNS.Value;
+            bool GT = returnGT(cbGT.SelectedItem.ToString());
+            string DC = txtDiaChi.Text;
+            string HSLuong = txtHSL.Text;
+            if (TenNV.Length == 0 || Cccd.Length == 0 || DC.Length == 0 || HSLuong.Length == 0)
+            {
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin trước khi lưu");
+                return;
+            }
+            bool kt = false;
+            try
+            {
+                int c = int.Parse(Cccd);
+                float HS = float.Parse(HSLuong);
+                kt =true;
+            }
+            catch(Exception exp)
+            {
+                kt = false;
+            }
+            if (!kt)
+            {
+                MessageBox.Show("Vui lòng nhập chính xác CCCD và HS Lương");
+                return;
+            }
+            foreach(NhanVien nv in listNV)
+            {
+                if (nv.MaNV == int.Parse(MaNV))
+                {
+                    kt = false;
+                }
+            }
+            if (!kt)
+            {
+                MessageBox.Show("Nhân viên đã tồn tại!");
+                return;
+            }
+            NhanVien newNV = new NhanVien();
+            newNV.MaNV = int.Parse(MaNV);
+            newNV.TenNV = TenNV;
+            newNV.Cccd = Cccd;
+            newNV.NgaySinh = NS;
+            newNV.GioiTinh = GT;
+            newNV.DiaChi = DC;
+            newNV.HsLuong = float.Parse(HSLuong);
+            newNV.HinhAnh = saveImg();
+            dao.addNhanVien(newNV, cbCV.SelectedIndex + 1, cbPB.SelectedIndex + 1);
+            MessageBox.Show("Thêm nhân viên thành công");
+            reset();
+        }
+        public string saveImg()
+        {
+            string kq = "";
+            if (lbFileName.Text.Length != 0)
+            {
+                string Dir = System.IO.Directory.GetCurrentDirectory();
+                Dir = Dir.Remove(Dir.Length - 10, 10);
+                string newName = Path.GetFileName(lbFileName.Text);
+                File.Copy(lbFileName.Text, Dir + "\\imgNV\\" + newName);
+                kq = newName;
+            }
+            return kq;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (txtMaNV.Enabled&&txtTenNV.Text.Length==0)
+            {
+                MessageBox.Show("Vui lòng chọn nhân viên trước khi xóa!");
+                return;
+            }
+            DialogResult dialogResult = MessageBox.Show("Sure", "Some Title", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                dao.delNhanVien(int.Parse(txtMaNV.Text));
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                MessageBox.Show("Hủy xóa thành công!");
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            if (txtMaNV.Enabled && txtTenNV.Text.Length == 0)
+            {
+                MessageBox.Show("Vui lòng chọn nhân viên trước khi sửa!");
+                return;
+            }
+            string MaNV = txtMaNV.Text;
+            string TenNV = txtTenNV.Text;
+            string Cccd = txtCCCD.Text;
+            DateTime NS = dtNS.Value;
+            bool GT = returnGT(cbGT.SelectedItem.ToString());
+            string DC = txtDiaChi.Text;
+            string HSLuong = txtHSL.Text;
+            if (TenNV.Length == 0 || Cccd.Length == 0 || DC.Length == 0 || HSLuong.Length == 0)
+            {
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin trước khi sửa");
+                return;
+            }
+            bool kt = false;
+            try
+            {
+                int c = int.Parse(Cccd);
+                float HS = float.Parse(HSLuong);
+                kt = true;
+            }
+            catch (Exception exp)
+            {
+                kt = false;
+            }
+            if (!kt)
+            {
+                MessageBox.Show("Vui lòng nhập chính xác CCCD và HS Lương");
+                return;
+            }
+            NhanVien newNV = new NhanVien();
+            newNV.MaNV = int.Parse(MaNV);
+            newNV.TenNV = TenNV;
+            newNV.Cccd = Cccd;
+            newNV.NgaySinh = NS;
+            newNV.GioiTinh = GT;
+            newNV.DiaChi = DC;
+            newNV.HsLuong = float.Parse(HSLuong);
+            dao.updateNV(newNV, cbCV.SelectedIndex + 1, cbPB.SelectedIndex + 1);
+            MessageBox.Show("Sửa nhân viên thành công");
+            reset();
         }
     }
 }

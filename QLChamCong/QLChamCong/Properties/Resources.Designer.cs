@@ -73,6 +73,16 @@ namespace QLChamCong.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap App_Logo {
+            get {
+                object obj = ResourceManager.GetObject("App-Logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Button_Add_icon {
             get {
                 object obj = ResourceManager.GetObject("Button-Add-icon", resourceCulture);
@@ -246,6 +256,16 @@ namespace QLChamCong.Properties {
         internal static System.Drawing.Bitmap Security_Key_Security_icon {
             get {
                 object obj = ResourceManager.GetObject("Security-Key-Security-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap User_Administrator_Blue_icon {
+            get {
+                object obj = ResourceManager.GetObject("User-Administrator-Blue-icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

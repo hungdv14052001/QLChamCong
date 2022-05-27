@@ -171,6 +171,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="imgNV\ảnh thẻ.jpg" />
+    <None Include="Resources\App-Logo.png" />
+    <None Include="Resources\User-Administrator-Blue-icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
