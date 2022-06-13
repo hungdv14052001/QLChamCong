@@ -49,8 +49,8 @@ namespace QLChamCong.Controller
                 nv.NgaySinh = getDate(r["NgaySinh"].ToString());
                 nv.GioiTinh = bool.Parse(r["GioiTinh"].ToString());
                 nv.DiaChi = r["DiaChi"].ToString();
-                nv.ChucVu = r["TenPB"].ToString();
-                nv.PhongBan= r["TenCV"].ToString();
+                nv.ChucVu = r["TenCV"].ToString();
+                nv.PhongBan= r["TenPB"].ToString();
                 nv.HsLuong = float.Parse(r["HSLuong"].ToString());
                 nv.HinhAnh = r["HinhAnh"].ToString();
                 listNV.Add(nv);

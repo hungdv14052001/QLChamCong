@@ -9,7 +9,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data;
 using System.Data.SqlClient;
 using System.IO;
 
@@ -30,8 +29,8 @@ namespace QLChamCong
             loadBangNV();
             con = new SqlConnection(str);
             con.Open();
-
         }
+        
         private void lb_Click(object sender, EventArgs e)
         {
             var lb = sender as Label;
@@ -101,7 +100,15 @@ namespace QLChamCong
         {
             listNV = dao.getListNV();
             int i = 0;
-            foreach(NhanVien nv in listNV)
+            List<Label> listlb = this.pnBangNV.Controls.OfType<Label>().ToList();
+            foreach (Label l in listlb)
+            {
+                if (!l.Tag.Equals("td"))
+                {
+                    pnBangNV.Controls.Remove(l);
+                }
+            }
+            foreach (NhanVien nv in listNV)
             {
                 i++;
                 Label lbMaNV = setLb(nv.MaNV.ToString(), nv.MaNV.ToString(), 53, 24, 0, 24*i);
@@ -381,6 +388,7 @@ namespace QLChamCong
             newNV.HsLuong = float.Parse(HSLuong);
             dao.updateNV(newNV, cbCV.SelectedIndex + 1, cbPB.SelectedIndex + 1);
             MessageBox.Show("Sửa nhân viên thành công");
+            loadBangNV();
             reset();
         }
     }

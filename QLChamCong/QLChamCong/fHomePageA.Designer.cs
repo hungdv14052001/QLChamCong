@@ -30,29 +30,31 @@ namespace QLChamCong
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.pnView = new System.Windows.Forms.Panel();
-            this.lb = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pc = new System.Windows.Forms.PictureBox();
+            this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.pnView = new System.Windows.Forms.Panel();
+            this.lb = new System.Windows.Forms.Label();
+            this.pc = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnView.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pc)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(55)))), ((int)(((byte)(61)))));
+            this.panel1.Controls.Add(this.button6);
             this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
@@ -64,65 +66,23 @@ namespace QLChamCong
             this.panel1.Size = new System.Drawing.Size(288, 878);
             this.panel1.TabIndex = 0;
             // 
-            // panel2
+            // button6
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(212)))), ((int)(((byte)(106)))));
-            this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(290, 123);
-            this.panel2.TabIndex = 1;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.panel3.Location = new System.Drawing.Point(2, 124);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1628, 2);
-            this.panel3.TabIndex = 2;
-            // 
-            // pnView
-            // 
-            this.pnView.BackColor = System.Drawing.Color.White;
-            this.pnView.Controls.Add(this.lb);
-            this.pnView.Controls.Add(this.pc);
-            this.pnView.Location = new System.Drawing.Point(296, 132);
-            this.pnView.Name = "pnView";
-            this.pnView.Size = new System.Drawing.Size(1334, 860);
-            this.pnView.TabIndex = 4;
-            // 
-            // lb
-            // 
-            this.lb.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(79)))), ((int)(((byte)(79)))));
-            this.lb.Location = new System.Drawing.Point(4, 343);
-            this.lb.Name = "lb";
-            this.lb.Size = new System.Drawing.Size(1328, 100);
-            this.lb.TabIndex = 6;
-            this.lb.Text = "PHẦN MỀM QUẢN LÝ CHẤM CÔNG";
-            this.lb.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label1
-            // 
-            this.label1.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(79)))), ((int)(((byte)(79)))));
-            this.label1.Location = new System.Drawing.Point(118, 12);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(165, 100);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Admin";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // pc
-            // 
-            this.pc.Image = global::QLChamCong.Properties.Resources.App_Logo;
-            this.pc.Location = new System.Drawing.Point(559, 174);
-            this.pc.Name = "pc";
-            this.pc.Size = new System.Drawing.Size(220, 200);
-            this.pc.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pc.TabIndex = 6;
-            this.pc.TabStop = false;
+            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(55)))), ((int)(((byte)(61)))));
+            this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button6.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(138)))), ((int)(((byte)(151)))));
+            this.button6.Image = global::QLChamCong.Properties.Resources.Business_Department_icon;
+            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button6.Location = new System.Drawing.Point(3, 190);
+            this.button6.Name = "button6";
+            this.button6.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.button6.Size = new System.Drawing.Size(288, 56);
+            this.button6.TabIndex = 5;
+            this.button6.Text = "Khai Báo PB, CV";
+            this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button5
             // 
@@ -140,6 +100,7 @@ namespace QLChamCong
             this.button5.Text = "Chấm Công";
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button2
             // 
@@ -175,6 +136,7 @@ namespace QLChamCong
             this.button1.Text = "Quản lý chấm công";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button3
             // 
@@ -184,7 +146,7 @@ namespace QLChamCong
             this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(138)))), ((int)(((byte)(151)))));
             this.button3.Image = global::QLChamCong.Properties.Resources.icTinhLuong;
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button3.Location = new System.Drawing.Point(3, 192);
+            this.button3.Location = new System.Drawing.Point(3, 252);
             this.button3.Name = "button3";
             this.button3.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.button3.Size = new System.Drawing.Size(288, 56);
@@ -201,7 +163,7 @@ namespace QLChamCong
             this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(138)))), ((int)(((byte)(151)))));
             this.button4.Image = global::QLChamCong.Properties.Resources.icReport;
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button4.Location = new System.Drawing.Point(3, 254);
+            this.button4.Location = new System.Drawing.Point(0, 314);
             this.button4.Name = "button4";
             this.button4.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.button4.Size = new System.Drawing.Size(288, 56);
@@ -209,6 +171,16 @@ namespace QLChamCong
             this.button4.Text = "Báo cáo";
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button4.UseVisualStyleBackColor = false;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(212)))), ((int)(((byte)(106)))));
+            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(290, 123);
+            this.panel2.TabIndex = 1;
             // 
             // pictureBox1
             // 
@@ -219,6 +191,56 @@ namespace QLChamCong
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(79)))), ((int)(((byte)(79)))));
+            this.label1.Location = new System.Drawing.Point(118, 12);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(165, 100);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Admin";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.panel3.Location = new System.Drawing.Point(2, 124);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1628, 2);
+            this.panel3.TabIndex = 2;
+            // 
+            // pnView
+            // 
+            this.pnView.BackColor = System.Drawing.Color.White;
+            this.pnView.Controls.Add(this.lb);
+            this.pnView.Controls.Add(this.pc);
+            this.pnView.Location = new System.Drawing.Point(296, 132);
+            this.pnView.Name = "pnView";
+            this.pnView.Size = new System.Drawing.Size(1334, 860);
+            this.pnView.TabIndex = 4;
+            // 
+            // lb
+            // 
+            this.lb.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(79)))), ((int)(((byte)(79)))));
+            this.lb.Location = new System.Drawing.Point(4, 343);
+            this.lb.Name = "lb";
+            this.lb.Size = new System.Drawing.Size(1328, 100);
+            this.lb.TabIndex = 6;
+            this.lb.Text = "PHẦN MỀM QUẢN LÝ CHẤM CÔNG";
+            this.lb.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pc
+            // 
+            this.pc.Image = global::QLChamCong.Properties.Resources.App_Logo;
+            this.pc.Location = new System.Drawing.Point(559, 174);
+            this.pc.Name = "pc";
+            this.pc.Size = new System.Drawing.Size(220, 200);
+            this.pc.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pc.TabIndex = 6;
+            this.pc.TabStop = false;
             // 
             // panel4
             // 
@@ -245,9 +267,9 @@ namespace QLChamCong
             this.Text = "HomePage";
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnView.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pc)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -268,5 +290,6 @@ namespace QLChamCong
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Button button6;
     }
 }

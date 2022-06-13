@@ -11,3 +11,6 @@ D:\Code\Project\Các phương pháp pt pm nhanh\QLChamCong\QLChamCong\obj\Debug\
 D:\Code\Project\Các phương pháp pt pm nhanh\QLChamCong\QLChamCong\obj\Debug\QLChamCong.Control.ctTextBox.resources
 D:\Code\Project\Các phương pháp pt pm nhanh\QLChamCong\QLChamCong\obj\Debug\QLChamCong.fHomePageA.resources
 D:\Code\Project\Các phương pháp pt pm nhanh\QLChamCong\QLChamCong\obj\Debug\QLChamCong.fQLNhanVien.resources
+D:\Code\Project\Các phương pháp pt pm nhanh\QLChamCong\QLChamCong\obj\Debug\QLChamCong.fKhaiBao.resources
+D:\Code\Project\Các phương pháp pt pm nhanh\QLChamCong\QLChamCong\obj\Debug\QLChamCong.fQLChamCong.resources
+D:\Code\Project\Các phương pháp pt pm nhanh\QLChamCong\QLChamCong\obj\Debug\QLChamCong.fChamCong.resources

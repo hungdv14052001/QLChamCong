@@ -40,8 +40,6 @@ namespace QLChamCong
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -49,8 +47,6 @@ namespace QLChamCong
             this.label18 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
-            this.txtMaNV = new System.Windows.Forms.TextBox();
-            this.txtTenNV = new System.Windows.Forms.TextBox();
             this.txtCCCD = new System.Windows.Forms.TextBox();
             this.dtNS = new System.Windows.Forms.DateTimePicker();
             this.cbGT = new System.Windows.Forms.ComboBox();
@@ -59,13 +55,17 @@ namespace QLChamCong
             this.cbCV = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.txtHSL = new System.Windows.Forms.TextBox();
+            this.lbFileName = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.pbHA = new System.Windows.Forms.PictureBox();
-            this.lbFileName = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtMaNV = new System.Windows.Forms.TextBox();
+            this.txtTenNV = new System.Windows.Forms.TextBox();
             this.pnBangNV.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbHA)).BeginInit();
             this.SuspendLayout();
@@ -214,30 +214,6 @@ namespace QLChamCong
             this.label10.Text = "QUẢN LÝ NHÂN VIÊN";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label11
-            // 
-            this.label11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(153)))), ((int)(((byte)(215)))));
-            this.label11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(142, 87);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(100, 30);
-            this.label11.TabIndex = 10;
-            this.label11.Text = "Mã NV:";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label12
-            // 
-            this.label12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(153)))), ((int)(((byte)(215)))));
-            this.label12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(142, 120);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(100, 30);
-            this.label12.TabIndex = 11;
-            this.label12.Text = "Tên NV:";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // label13
             // 
             this.label13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(153)))), ((int)(((byte)(215)))));
@@ -322,22 +298,6 @@ namespace QLChamCong
             this.label19.Text = "Chức vụ:";
             this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // txtMaNV
-            // 
-            this.txtMaNV.Location = new System.Drawing.Point(248, 87);
-            this.txtMaNV.Multiline = true;
-            this.txtMaNV.Name = "txtMaNV";
-            this.txtMaNV.Size = new System.Drawing.Size(269, 30);
-            this.txtMaNV.TabIndex = 19;
-            // 
-            // txtTenNV
-            // 
-            this.txtTenNV.Location = new System.Drawing.Point(248, 120);
-            this.txtTenNV.Multiline = true;
-            this.txtTenNV.Name = "txtTenNV";
-            this.txtTenNV.Size = new System.Drawing.Size(269, 30);
-            this.txtTenNV.TabIndex = 20;
-            // 
             // txtCCCD
             // 
             this.txtCCCD.Location = new System.Drawing.Point(248, 153);
@@ -404,6 +364,14 @@ namespace QLChamCong
             this.txtHSL.Name = "txtHSL";
             this.txtHSL.Size = new System.Drawing.Size(269, 30);
             this.txtHSL.TabIndex = 35;
+            // 
+            // lbFileName
+            // 
+            this.lbFileName.Location = new System.Drawing.Point(990, 289);
+            this.lbFileName.Name = "lbFileName";
+            this.lbFileName.Size = new System.Drawing.Size(150, 23);
+            this.lbFileName.TabIndex = 36;
+            this.lbFileName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // button6
             // 
@@ -487,13 +455,45 @@ namespace QLChamCong
             this.pbHA.TabIndex = 28;
             this.pbHA.TabStop = false;
             // 
-            // lbFileName
+            // label11
             // 
-            this.lbFileName.Location = new System.Drawing.Point(990, 289);
-            this.lbFileName.Name = "lbFileName";
-            this.lbFileName.Size = new System.Drawing.Size(150, 23);
-            this.lbFileName.TabIndex = 36;
-            this.lbFileName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(153)))), ((int)(((byte)(215)))));
+            this.label11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(142, 87);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(100, 30);
+            this.label11.TabIndex = 10;
+            this.label11.Text = "Mã NV:";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label12
+            // 
+            this.label12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(153)))), ((int)(((byte)(215)))));
+            this.label12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(142, 120);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(100, 30);
+            this.label12.TabIndex = 11;
+            this.label12.Text = "Tên NV:";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // txtMaNV
+            // 
+            this.txtMaNV.Location = new System.Drawing.Point(248, 87);
+            this.txtMaNV.Multiline = true;
+            this.txtMaNV.Name = "txtMaNV";
+            this.txtMaNV.Size = new System.Drawing.Size(269, 30);
+            this.txtMaNV.TabIndex = 19;
+            // 
+            // txtTenNV
+            // 
+            this.txtTenNV.Location = new System.Drawing.Point(248, 120);
+            this.txtTenNV.Multiline = true;
+            this.txtTenNV.Name = "txtTenNV";
+            this.txtTenNV.Size = new System.Drawing.Size(269, 30);
+            this.txtTenNV.TabIndex = 20;
             // 
             // fQLNhanVien
             // 
@@ -552,8 +552,6 @@ namespace QLChamCong
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
@@ -561,8 +559,6 @@ namespace QLChamCong
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.TextBox txtMaNV;
-        private System.Windows.Forms.TextBox txtTenNV;
         private System.Windows.Forms.TextBox txtCCCD;
         private System.Windows.Forms.DateTimePicker dtNS;
         private System.Windows.Forms.ComboBox cbGT;
@@ -578,5 +574,9 @@ namespace QLChamCong
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.TextBox txtHSL;
         private System.Windows.Forms.Label lbFileName;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox txtMaNV;
+        private System.Windows.Forms.TextBox txtTenNV;
     }
 }

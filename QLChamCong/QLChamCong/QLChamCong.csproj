@@ -56,6 +56,12 @@
     <Compile Include="Control\ctTextBox.Designer.cs">
       <DependentUpon>ctTextBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="fChamCong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fChamCong.Designer.cs">
+      <DependentUpon>fChamCong.cs</DependentUpon>
+    </Compile>
     <Compile Include="fDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,6 +73,18 @@
     </Compile>
     <Compile Include="fHomePageA.Designer.cs">
       <DependentUpon>fHomePageA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fKhaiBao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fKhaiBao.Designer.cs">
+      <DependentUpon>fKhaiBao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fQLChamCong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fQLChamCong.Designer.cs">
+      <DependentUpon>fQLChamCong.cs</DependentUpon>
     </Compile>
     <Compile Include="fQLNhanVien.cs">
       <SubType>Form</SubType>
@@ -80,11 +98,20 @@
     <EmbeddedResource Include="Control\ctTextBox.resx">
       <DependentUpon>ctTextBox.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="fChamCong.resx">
+      <DependentUpon>fChamCong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="fDangNhap.resx">
       <DependentUpon>fDangNhap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fHomePageA.resx">
       <DependentUpon>fHomePageA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fKhaiBao.resx">
+      <DependentUpon>fKhaiBao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fQLChamCong.resx">
+      <DependentUpon>fQLChamCong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fQLNhanVien.resx">
       <DependentUpon>fQLNhanVien.cs</DependentUpon>
@@ -171,6 +198,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="imgNV\ảnh thẻ.jpg" />
+    <None Include="Resources\Business-Department-icon.png" />
     <None Include="Resources\App-Logo.png" />
     <None Include="Resources\User-Administrator-Blue-icon.png" />
   </ItemGroup>
