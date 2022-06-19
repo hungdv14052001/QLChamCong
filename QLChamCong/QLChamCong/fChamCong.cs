@@ -37,7 +37,7 @@ namespace QLChamCong
             cbChonDuyet.SelectedIndex = 0;
             cbChonDuyet.Enabled = false;
             txtTenNV.Enabled = false;
-            lbTime.Text = DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss");
+            lbTime.Text = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
         }
 
         private void rdbTimeIn_CheckedChanged(object sender, EventArgs e)
@@ -55,11 +55,12 @@ namespace QLChamCong
                 rdbTimeIn.Checked = false;
             }
         }
-
+        
         private void button1_Click(object sender, EventArgs e)
         {
+            listNV = dao.getListNV();
             string MaNV = txtMaNV.Text;
-            if(MaNV.Length== 0)
+            if (MaNV.Length == 0)
             {
                 MessageBox.Show("Vui lòng nhập Mã NV!");
                 return;
@@ -74,11 +75,12 @@ namespace QLChamCong
                 return;
             }
             bool kt = false;
-            foreach(NhanVien nv in listNV)
+            foreach (NhanVien nv in listNV)
             {
-                if(nv.MaNV== int.Parse(MaNV)) {
+                if (nv.MaNV == int.Parse(MaNV))
+                {
                     txtTenNV.Text = nv.TenNV;
-                    kt = true; 
+                    kt = true;
                 }
             }
             if (!kt)
@@ -101,7 +103,7 @@ namespace QLChamCong
             }
             else
             {
-                commandtext = "update tblChamCong set TGVe= '" + DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss") + "' where NgayCham='" + DateTime.Now.ToString("yyyy-MM-dd") + "' and MaNV= " + txtMaNV.Text;
+                commandtext = "update tblChamCong set TGVe= '" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "' where NgayCham='" + DateTime.Now.ToString("yyyy-MM-dd") + "' and MaNV= " + txtMaNV.Text;
             }
             try
             {

@@ -19,7 +19,6 @@ namespace QLChamCong.Model
         private string chucVu;
         private float hsLuong;
         private string hinhAnh;
-
         public NhanVien()
         {
 

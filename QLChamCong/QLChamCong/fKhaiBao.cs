@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using QLChamCong.Model;
+using QLChamCong.Controller;
 
 namespace QLChamCong
 {
@@ -17,9 +19,15 @@ namespace QLChamCong
         SqlConnection con;
         SqlCommand com = new SqlCommand();
         SqlDataAdapter dad = new SqlDataAdapter();
+        List<PhongBan> listPB = new List<PhongBan>();
+        List<ChucVu> listCV = new List<ChucVu>();
+        private DAO dao = new DAO();
+
         public fKhaiBao()
         {
             InitializeComponent();
+            listCV = dao.getListChucVu();
+            listPB = dao.getListPhongBan();
             con = new SqlConnection(str);
             con.Open();
             loadBangPB();
@@ -28,44 +36,50 @@ namespace QLChamCong
         }
         public void loadBangPB()
         {
+            listPB = dao.getListPhongBan();
             List<Label> listlb = this.pnBangPB.Controls.OfType<Label>().ToList();
             foreach (Label l in listlb)
             {
                 pnBangPB.Controls.Remove(l);
             }
-            com = con.CreateCommand();
-            com.CommandText = "select * from tblPhongBan";
-            dad.SelectCommand = com;
-            DataTable dt = new DataTable();
-            dad.Fill(dt);
             int i = 0;
-            foreach(DataRow r in dt.Rows)
+            foreach (PhongBan pb in listPB)
             {
-                Label lbMaPB = setLb("P "+r["MaPB"].ToString(), r["MaPB"].ToString(), 150, 24, 0, 24 * i);
+                Label lbMaPB = setLb("P " + pb.MaPB.ToString(), pb.MaPB.ToString(), 150, 24, 0, 24 * i);
                 pnBangPB.Controls.Add(lbMaPB);
-                Label lbTenPB = setLb("P " + r["MaPB"].ToString(), r["TenPB"].ToString(), 328, 24, 150, 24 * i);
+                Label lbTenPB = setLb("P " + pb.MaPB.ToString(), pb.TenPB, 328, 24, 150, 24 * i);
                 pnBangPB.Controls.Add(lbTenPB);
                 i++;
             }
+            //com = con.CreateCommand();
+            //com.CommandText = "select * from tblPhongBan";
+            //dad.SelectCommand = com;
+            //DataTable dt = new DataTable();
+            //dad.Fill(dt);
+            //int i = 0;
+            //foreach(DataRow r in dt.Rows)
+            //{
+            //    Label lbMaPB = setLb("P "+r["MaPB"].ToString(), r["MaPB"].ToString(), 150, 24, 0, 24 * i);
+            //    pnBangPB.Controls.Add(lbMaPB);
+            //    Label lbTenPB = setLb("P " + r["MaPB"].ToString(), r["TenPB"].ToString(), 328, 24, 150, 24 * i);
+            //    pnBangPB.Controls.Add(lbTenPB);
+            //    i++;
+            //}
         }
         public void loadBangCV()
         {
+            listCV = dao.getListChucVu();
             List<Label> listlb = this.pnBangCV.Controls.OfType<Label>().ToList();
             foreach (Label l in listlb)
             {
                 pnBangCV.Controls.Remove(l);
             }
-            com = con.CreateCommand();
-            com.CommandText = "select * from tblChucVu";
-            dad.SelectCommand = com;
-            DataTable dt = new DataTable();
-            dad.Fill(dt);
             int i = 0;
-            foreach (DataRow r in dt.Rows)
+            foreach (ChucVu cv in listCV)
             {
-                Label lbMaCV = setLb("C " + r["MaCV"].ToString(), r["MaCV"].ToString(), 150, 24, 0, 24 * i);
+                Label lbMaCV = setLb("C " + cv.MaCV.ToString(), cv.MaCV.ToString(), 150, 24, 0, 24 * i);
                 pnBangCV.Controls.Add(lbMaCV);
-                Label lbTenCV = setLb("C " + r["MaCV"].ToString(), r["TenCV"].ToString(), 330, 24, 150, 24 * i);
+                Label lbTenCV = setLb("C " + cv.MaCV.ToString(), cv.TenCV, 330, 24, 150, 24 * i);
                 pnBangCV.Controls.Add(lbTenCV);
                 i++;
             }
@@ -115,39 +129,30 @@ namespace QLChamCong
         }
         public void setData(string t)
         {
+            listCV = dao.getListChucVu();
+            listPB = dao.getListPhongBan();
             string[] T = t.Split(' ');
-
             if (T[0].Equals("P"))
             {
-                com = con.CreateCommand();
-                com.CommandText = "select * from tblPhongBan";
-                dad.SelectCommand = com;
-                DataTable dt = new DataTable();
-                dad.Fill(dt);
-                foreach(DataRow r in dt.Rows)
+                foreach(PhongBan pb in listPB)
                 {
-                    if (T[1].Equals(r["MaPB"].ToString()))
+                    if (T[1].Equals(pb.MaPB.ToString()))
                     {
-                        txtMaPB.Text = r["MaPB"].ToString();
+                        txtMaPB.Text = pb.MaPB.ToString();
                         txtMaPB.Enabled = false;
-                        txtTenPB.Text = r["TenPB"].ToString();
+                        txtTenPB.Text = pb.TenPB;
                     }
                 }
             }
             else
             {
-                com = con.CreateCommand();
-                com.CommandText = "select * from tblChucVu";
-                dad.SelectCommand = com;
-                DataTable dt = new DataTable();
-                dad.Fill(dt);
-                foreach (DataRow r in dt.Rows)
+                foreach (ChucVu cv in listCV)
                 {
-                    if (T[1].Equals(r["MaCV"].ToString()))
+                    if (T[1].Equals(cv.MaCV.ToString()))
                     {
-                        txtMaCV.Text = r["MaCV"].ToString();
+                        txtMaCV.Text = cv.MaCV.ToString();
                         txtMaCV.Enabled = false;
-                        txtTenCV.Text = r["TenCV"].ToString();
+                        txtTenCV.Text = cv.TenCV;
                     }
                 }
             }
@@ -162,14 +167,13 @@ namespace QLChamCong
             }
             try
             {
-                com = con.CreateCommand();
-                com.CommandText = "insert into tblPhongBan(TenPB) values(N'" + TenPB + "')";
-                com.ExecuteNonQuery();
+                PhongBan pb = new PhongBan(0, TenPB);
+                dao.addPhongBan(pb);
                 MessageBox.Show("Thêm thành công");
                 loadBangPB();
                 reset();
             }
-            catch(Exception ex)
+            catch
             {
                 MessageBox.Show("Thêm thất bại");
             }
@@ -187,7 +191,6 @@ namespace QLChamCong
 
         private void button7_Click(object sender, EventArgs e)
         {
-            
             loadBangPB();
             reset();
         }
@@ -207,9 +210,8 @@ namespace QLChamCong
             }
             try
             {
-                com = con.CreateCommand();
-                com.CommandText = "delete from tblPhongBan where MaPB=" + txtMaPB.Text;
-                com.ExecuteNonQuery();
+                PhongBan pb = new PhongBan(int.Parse(txtMaPB.Text), txtTenPB.Text);
+                dao.deletePhongBan(pb);
                 MessageBox.Show("Xóa thành công");
                 loadBangPB();
                 reset();
@@ -235,9 +237,8 @@ namespace QLChamCong
             }
             try
             {
-                com = con.CreateCommand();
-                com.CommandText = "update tblPhongBan set TenPB= N'"+TenPB+"' where MaPB= "+ txtMaPB.Text;
-                com.ExecuteNonQuery();
+                PhongBan pb = new PhongBan(int.Parse(txtMaPB.Text), TenPB);
+                dao.updatePhongBan(pb);
                 MessageBox.Show("Sửa thành công");
                 loadBangPB();
                 reset();
@@ -258,14 +259,13 @@ namespace QLChamCong
             }
             try
             {
-                com = con.CreateCommand();
-                com.CommandText = "insert into tblChucVu(TenCV) values(N'" + TenCV + "')";
-                com.ExecuteNonQuery();
+                ChucVu cv = new ChucVu(0, txtTenCV.Text);
+                dao.addChucVu(cv);
                 MessageBox.Show("Thêm thành công");
                 loadBangCV();
                 reset();
             }
-            catch (Exception ex)
+            catch
             {
                 MessageBox.Show("Thêm thất bại");
             }
@@ -280,9 +280,8 @@ namespace QLChamCong
             }
             try
             {
-                com = con.CreateCommand();
-                com.CommandText = "delete from tblChucVu where MaCV=" + txtMaCV.Text;
-                com.ExecuteNonQuery();
+                ChucVu cv = new ChucVu(int.Parse(txtMaCV.Text), txtTenCV.Text);
+                dao.deleteChucVu(cv);
                 MessageBox.Show("Xóa thành công");
                 loadBangCV();
                 reset();
@@ -308,9 +307,8 @@ namespace QLChamCong
             }
             try
             {
-                com = con.CreateCommand();
-                com.CommandText = "update tblChucVu set TenCV= N'" + TenCV + "' where MaCV= " + txtMaCV.Text;
-                com.ExecuteNonQuery();
+                ChucVu cv = new ChucVu(int.Parse(txtMaCV.Text), TenCV);
+                dao.updateChucVu(cv);
                 MessageBox.Show("Sửa thành công");
                 loadBangCV();
                 reset();

@@ -20,12 +20,16 @@ namespace QLChamCong
         SqlConnection con;
         SqlCommand com = new SqlCommand();
         SqlDataAdapter dad = new SqlDataAdapter();
-        private List<NhanVien> listNV = new List<NhanVien>();
+        List<NhanVien> listNV = new List<NhanVien>();
+        List<PhongBan> listPB = new List<PhongBan>();
+        List<ChucVu> listCV = new List<ChucVu>();
         private DAO dao = new DAO();
         public fQLNhanVien()
         {
             InitializeComponent();
             listNV = dao.getListNV();
+            listCV = dao.getListChucVu();
+            listPB = dao.getListPhongBan();
             loadBangNV();
             con = new SqlConnection(str);
             con.Open();
@@ -160,25 +164,17 @@ namespace QLChamCong
         }
         public void loadCB()
         {
-            DataTable dt = new DataTable();
+            listPB = dao.getListPhongBan();
+            listCV = dao.getListChucVu();
             cbCV.Items.Clear();
-            com = con.CreateCommand();
-            com.CommandText = "select * from tblChucVu";
-            dad.SelectCommand = com;
-            dad.Fill(dt);
-            foreach(DataRow r in dt.Rows)
+            foreach (ChucVu cv in listCV)
             {
-                cbCV.Items.Add(r["TenCV"].ToString());
+                cbCV.Items.Add(cv.TenCV);
             }
             cbPB.Items.Clear();
-            com = con.CreateCommand();
-            com.CommandText = "select * from tblPhongBan";
-            dad.SelectCommand = com;
-            dt.Clear();
-            dad.Fill(dt);
-            foreach (DataRow r in dt.Rows)
+            foreach (PhongBan pb in listPB)
             {
-                cbPB.Items.Add(r["TenPB"].ToString());
+                cbPB.Items.Add(pb.TenPB);
             }
             cbGT.Items.Clear();
             cbGT.Items.Add("Nam");
@@ -190,7 +186,7 @@ namespace QLChamCong
             // open file dialog   
             OpenFileDialog open = new OpenFileDialog();
             // image filters  
-            open.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp)|*.jpg; *.jpeg; *.gif; *.bmp";
+            open.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp; *.png)|*.jpg; *.jpeg; *.gif; *.bmp; *.png";
             if (open.ShowDialog() == DialogResult.OK)
             {
                 // display image in picture box  
@@ -277,7 +273,7 @@ namespace QLChamCong
                 float HS = float.Parse(HSLuong);
                 kt =true;
             }
-            catch(Exception exp)
+            catch
             {
                 kt = false;
             }
@@ -369,7 +365,7 @@ namespace QLChamCong
                 float HS = float.Parse(HSLuong);
                 kt = true;
             }
-            catch (Exception exp)
+            catch
             {
                 kt = false;
             }

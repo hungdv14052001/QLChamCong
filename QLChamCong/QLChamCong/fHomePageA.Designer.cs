@@ -163,7 +163,7 @@ namespace QLChamCong
             this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(138)))), ((int)(((byte)(151)))));
             this.button4.Image = global::QLChamCong.Properties.Resources.icReport;
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button4.Location = new System.Drawing.Point(0, 314);
+            this.button4.Location = new System.Drawing.Point(4, 314);
             this.button4.Name = "button4";
             this.button4.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.button4.Size = new System.Drawing.Size(288, 56);

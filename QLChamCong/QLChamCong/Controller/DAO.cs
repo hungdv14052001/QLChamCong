@@ -93,7 +93,7 @@ namespace QLChamCong.Controller
                 com.ExecuteNonQuery();
                 return true;
             }
-            catch(Exception exp)
+            catch
             {
                 return false;
             }
@@ -122,7 +122,130 @@ namespace QLChamCong.Controller
                 com.ExecuteNonQuery();
                 return true;
             }
-            catch (Exception exp)
+            catch
+            {
+                return false;
+            }
+        }
+
+        //Chức Vu
+
+        public List<ChucVu> getListChucVu()
+        {
+            List<ChucVu> listChucVu = new List<ChucVu>();
+            com = con.CreateCommand();
+            com.CommandText = "select * from tblChucVu";
+            dad.SelectCommand = com;
+            DataTable dt = new DataTable();
+            dad.Fill(dt);
+            foreach (DataRow r in dt.Rows)
+            {
+                ChucVu cv = new ChucVu();
+                cv.MaCV = int.Parse(r["MaCV"].ToString());
+                cv.TenCV = r["TenCV"].ToString();
+                listChucVu.Add(cv);
+            }
+            return listChucVu;
+        }
+        public bool addChucVu(ChucVu cv)
+        {
+            try
+            {
+                com = con.CreateCommand();
+                com.CommandText = "insert into tblChucVu(TenCV) values(N'" + cv.TenCV + "')";
+                com.ExecuteNonQuery();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+        public bool updateChucVu(ChucVu cv)
+        {
+            try
+            {
+                com = con.CreateCommand();
+                com.CommandText = "update tblChucVu set TenCV=N'"+cv.TenCV+"' where MaCV="+cv.MaCV;
+                com.ExecuteNonQuery();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+        public bool deleteChucVu(ChucVu cv)
+        {
+            try
+            {
+                com = con.CreateCommand();
+                com.CommandText = "delete from tblChucVu where MaCV="+cv.MaCV;
+                com.ExecuteNonQuery();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+        //Phòng Ban
+
+        public List<PhongBan> getListPhongBan()
+        {
+            List<PhongBan> listPhongBan = new List<PhongBan>();
+            com = con.CreateCommand();
+            com.CommandText = "select * from tblPhongBan";
+            dad.SelectCommand = com;
+            DataTable dt = new DataTable();
+            dad.Fill(dt);
+            foreach (DataRow r in dt.Rows)
+            {
+                PhongBan pb = new PhongBan();
+                pb.MaPB = int.Parse(r["MaPB"].ToString());
+                pb.TenPB = r["TenPB"].ToString();
+                listPhongBan.Add(pb);
+            }
+            return listPhongBan;
+        }
+        public bool addPhongBan(PhongBan pb)
+        {
+            try
+            {
+                com = con.CreateCommand();
+                com.CommandText = "insert into tblPhongBan(TenPB) values(N'" + pb.TenPB + "')";
+                com.ExecuteNonQuery();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+        public bool updatePhongBan(PhongBan pb)
+        {
+            try
+            {
+                com = con.CreateCommand();
+                com.CommandText = "update tblPhongBan set TenPB=N'" + pb.TenPB + "' where MaPB=" + pb.MaPB;
+                com.ExecuteNonQuery();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+        public bool deletePhongBan(PhongBan pb)
+        {
+            try
+            {
+                com = con.CreateCommand();
+                com.CommandText = "delete from tblPhongBan where MaPB=" + pb.MaPB;
+                com.ExecuteNonQuery();
+                return true;
+            }
+            catch
             {
                 return false;
             }
