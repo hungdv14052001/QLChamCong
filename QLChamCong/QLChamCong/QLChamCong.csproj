@@ -56,6 +56,12 @@
     <Compile Include="Control\ctTextBox.Designer.cs">
       <DependentUpon>ctTextBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="fBaoCao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fBaoCao.Designer.cs">
+      <DependentUpon>fBaoCao.cs</DependentUpon>
+    </Compile>
     <Compile Include="fChamCong.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +112,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Control\ctTextBox.resx">
       <DependentUpon>ctTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fBaoCao.resx">
+      <DependentUpon>fBaoCao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fChamCong.resx">
       <DependentUpon>fChamCong.cs</DependentUpon>

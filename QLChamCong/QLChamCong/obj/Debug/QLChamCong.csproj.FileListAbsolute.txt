@@ -15,3 +15,22 @@ D:\Code\Project\Các phương pháp pt pm nhanh\QLChamCong\QLChamCong\obj\Debug\
 D:\Code\Project\Các phương pháp pt pm nhanh\QLChamCong\QLChamCong\obj\Debug\QLChamCong.fQLChamCong.resources
 D:\Code\Project\Các phương pháp pt pm nhanh\QLChamCong\QLChamCong\obj\Debug\QLChamCong.fChamCong.resources
 D:\Code\Project\Các phương pháp pt pm nhanh\QLChamCong\QLChamCong\obj\Debug\QLChamCong.fTinhTienLuong.resources
+D:\code github clone\Clone ChamCong\QLChamCong\QLChamCong\QLChamCong\bin\Debug\QLChamCong.exe.config
+D:\code github clone\Clone ChamCong\QLChamCong\QLChamCong\QLChamCong\bin\Debug\QLChamCong.exe
+D:\code github clone\Clone ChamCong\QLChamCong\QLChamCong\QLChamCong\bin\Debug\QLChamCong.pdb
+D:\code github clone\Clone ChamCong\QLChamCong\QLChamCong\QLChamCong\obj\Debug\QLChamCong.csproj.AssemblyReference.cache
+D:\code github clone\Clone ChamCong\QLChamCong\QLChamCong\QLChamCong\obj\Debug\QLChamCong.csproj.SuggestedBindingRedirects.cache
+D:\code github clone\Clone ChamCong\QLChamCong\QLChamCong\QLChamCong\obj\Debug\QLChamCong.Control.ctTextBox.resources
+D:\code github clone\Clone ChamCong\QLChamCong\QLChamCong\QLChamCong\obj\Debug\QLChamCong.fChamCong.resources
+D:\code github clone\Clone ChamCong\QLChamCong\QLChamCong\QLChamCong\obj\Debug\QLChamCong.fDangNhap.resources
+D:\code github clone\Clone ChamCong\QLChamCong\QLChamCong\QLChamCong\obj\Debug\QLChamCong.fHomePageA.resources
+D:\code github clone\Clone ChamCong\QLChamCong\QLChamCong\QLChamCong\obj\Debug\QLChamCong.fKhaiBao.resources
+D:\code github clone\Clone ChamCong\QLChamCong\QLChamCong\QLChamCong\obj\Debug\QLChamCong.fQLChamCong.resources
+D:\code github clone\Clone ChamCong\QLChamCong\QLChamCong\QLChamCong\obj\Debug\QLChamCong.fQLNhanVien.resources
+D:\code github clone\Clone ChamCong\QLChamCong\QLChamCong\QLChamCong\obj\Debug\QLChamCong.fTinhTienLuong.resources
+D:\code github clone\Clone ChamCong\QLChamCong\QLChamCong\QLChamCong\obj\Debug\QLChamCong.Properties.Resources.resources
+D:\code github clone\Clone ChamCong\QLChamCong\QLChamCong\QLChamCong\obj\Debug\QLChamCong.csproj.GenerateResource.cache
+D:\code github clone\Clone ChamCong\QLChamCong\QLChamCong\QLChamCong\obj\Debug\QLChamCong.csproj.CoreCompileInputs.cache
+D:\code github clone\Clone ChamCong\QLChamCong\QLChamCong\QLChamCong\obj\Debug\QLChamCong.exe
+D:\code github clone\Clone ChamCong\QLChamCong\QLChamCong\QLChamCong\obj\Debug\QLChamCong.pdb
+D:\code github clone\Clone ChamCong\QLChamCong\QLChamCong\QLChamCong\obj\Debug\QLChamCong.fBaoCao.resources

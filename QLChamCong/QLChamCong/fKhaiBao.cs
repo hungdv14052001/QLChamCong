@@ -15,7 +15,7 @@ namespace QLChamCong
 {
     public partial class fKhaiBao : Form
     {
-        string str = @"Data Source=DESKTOP-FA5AISU\SQLEXPRESS;Initial Catalog=QLChamCong;Integrated Security=True";
+        string str = @"Data Source=DESKTOP-LICKT66;Initial Catalog=QLChamCong;Integrated Security=True";
         SqlConnection con;
         SqlCommand com = new SqlCommand();
         SqlDataAdapter dad = new SqlDataAdapter();
