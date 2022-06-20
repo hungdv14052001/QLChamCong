@@ -250,5 +250,26 @@ namespace QLChamCong.Controller
                 return false;
             }
         }
+        //Chấm Công
+        public List<ChamCong> getListChamCong()
+        {
+            List<ChamCong> listChamCong = new List<ChamCong>();
+            com = con.CreateCommand();
+            com.CommandText = "select * from tblChamCong";
+            dad.SelectCommand = com;
+            DataTable dt = new DataTable();
+            dad.Fill(dt);
+            foreach (DataRow r in dt.Rows)
+            {
+                ChamCong cc = new ChamCong();
+                cc.MaCC = int.Parse(r["MaCC"].ToString());
+                cc.MaNV = int.Parse(r["MaNV"].ToString());
+                cc.TgDen = getDate(r["TGDen"].ToString());
+                cc.TgVe = getDate(r["TGDen"].ToString());
+                cc.NgayCham = getDate(r["NgayCham"].ToString());
+                listChamCong.Add(cc);
+            }
+            return listChamCong;
+        }
     }
 }

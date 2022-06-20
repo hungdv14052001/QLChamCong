@@ -154,6 +154,7 @@ namespace QLChamCong
             this.button3.Text = "Tính tiền lương";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 

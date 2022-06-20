@@ -16,6 +16,7 @@ namespace QLChamCong
         fKhaiBao fKB= new fKhaiBao() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
         fQLChamCong fQLCC= new fQLChamCong() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
         fChamCong fCC = new fChamCong() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+        fTinhTienLuong fTTL= new fTinhTienLuong() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
         List<Form> listform = new List<Form>();
         public fHomePageA()
         {
@@ -29,14 +30,17 @@ namespace QLChamCong
             fKB.FormBorderStyle = (FormBorderStyle)FormBorderStyle.None;
             fQLCC.FormBorderStyle = (FormBorderStyle)FormBorderStyle.None;
             fCC.FormBorderStyle = (FormBorderStyle)FormBorderStyle.None;
+            fTTL.FormBorderStyle = (FormBorderStyle)FormBorderStyle.None;
             this.pnView.Controls.Add(fQLNV);
             this.pnView.Controls.Add(fKB);
             this.pnView.Controls.Add(fQLCC);
             this.pnView.Controls.Add(fCC);
+            this.pnView.Controls.Add(fTTL);
             listform.Add(fQLNV);
             listform.Add(fKB);
             listform.Add(fQLCC);
             listform.Add(fCC);
+            listform.Add(fTTL);
         }
         public void dongtrc()
         {
@@ -69,6 +73,12 @@ namespace QLChamCong
         {
             dongtrc();
             fCC.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            dongtrc();
+            fTTL.Show();
         }
     }
 }

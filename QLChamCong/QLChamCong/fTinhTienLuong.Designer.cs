@@ -33,17 +33,17 @@ namespace QLChamCong
             this.label23 = new System.Windows.Forms.Label();
             this.btnXemCong = new System.Windows.Forms.Button();
             this.label19 = new System.Windows.Forms.Label();
-            this.pnChiTietBangCong = new System.Windows.Forms.Panel();
+            this.pnBangLuong = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.dtTime = new System.Windows.Forms.DateTimePicker();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -76,6 +76,7 @@ namespace QLChamCong
             this.btnXemCong.TabIndex = 34;
             this.btnXemCong.Text = "Chốt lương";
             this.btnXemCong.UseVisualStyleBackColor = true;
+            this.btnXemCong.Click += new System.EventHandler(this.btnXemCong_Click);
             // 
             // label19
             // 
@@ -87,13 +88,13 @@ namespace QLChamCong
             this.label19.Text = "Thời gian:";
             this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // pnChiTietBangCong
+            // pnBangLuong
             // 
-            this.pnChiTietBangCong.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.pnChiTietBangCong.Location = new System.Drawing.Point(12, 176);
-            this.pnChiTietBangCong.Name = "pnChiTietBangCong";
-            this.pnChiTietBangCong.Size = new System.Drawing.Size(1288, 517);
-            this.pnChiTietBangCong.TabIndex = 29;
+            this.pnBangLuong.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.pnBangLuong.Location = new System.Drawing.Point(12, 176);
+            this.pnBangLuong.Name = "pnBangLuong";
+            this.pnBangLuong.Size = new System.Drawing.Size(1288, 517);
+            this.pnBangLuong.TabIndex = 29;
             // 
             // label14
             // 
@@ -151,57 +152,18 @@ namespace QLChamCong
             this.panel3.Size = new System.Drawing.Size(1288, 30);
             this.panel3.TabIndex = 28;
             // 
-            // label1
+            // label6
             // 
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(212)))), ((int)(((byte)(106)))));
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(552, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(110, 30);
-            this.label1.TabIndex = 13;
-            this.label1.Tag = "td";
-            this.label1.Text = "HS Lương";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label2
-            // 
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(212)))), ((int)(((byte)(106)))));
-            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(662, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(110, 30);
-            this.label2.TabIndex = 14;
-            this.label2.Tag = "td";
-            this.label2.Text = "Lương CB";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label3
-            // 
-            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(212)))), ((int)(((byte)(106)))));
-            this.label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(411, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(141, 30);
-            this.label3.TabIndex = 15;
-            this.label3.Tag = "td";
-            this.label3.Text = "Số Ngày Nghỉ";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label4
-            // 
-            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(212)))), ((int)(((byte)(106)))));
-            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(772, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(110, 30);
-            this.label4.TabIndex = 16;
-            this.label4.Tag = "td";
-            this.label4.Text = "Thưởng";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(212)))), ((int)(((byte)(106)))));
+            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(992, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(110, 30);
+            this.label6.TabIndex = 18;
+            this.label6.Tag = "td";
+            this.label6.Text = "Tổng";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label5
             // 
@@ -216,18 +178,57 @@ namespace QLChamCong
             this.label5.Text = "Phạt";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label6
+            // label4
             // 
-            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(212)))), ((int)(((byte)(106)))));
-            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(992, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(110, 30);
-            this.label6.TabIndex = 18;
-            this.label6.Tag = "td";
-            this.label6.Text = "Tổng";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(212)))), ((int)(((byte)(106)))));
+            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(772, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(110, 30);
+            this.label4.TabIndex = 16;
+            this.label4.Tag = "td";
+            this.label4.Text = "Thưởng";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label3
+            // 
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(212)))), ((int)(((byte)(106)))));
+            this.label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(411, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(141, 30);
+            this.label3.TabIndex = 15;
+            this.label3.Tag = "td";
+            this.label3.Text = "Số Ngày Nghỉ";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(212)))), ((int)(((byte)(106)))));
+            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(662, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(110, 30);
+            this.label2.TabIndex = 14;
+            this.label2.Tag = "td";
+            this.label2.Text = "Lương CB";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(212)))), ((int)(((byte)(106)))));
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(552, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(110, 30);
+            this.label1.TabIndex = 13;
+            this.label1.Tag = "td";
+            this.label1.Text = "HS Lương";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // dtTime
             // 
@@ -248,7 +249,7 @@ namespace QLChamCong
             this.Controls.Add(this.label23);
             this.Controls.Add(this.btnXemCong);
             this.Controls.Add(this.label19);
-            this.Controls.Add(this.pnChiTietBangCong);
+            this.Controls.Add(this.pnBangLuong);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.label10);
             this.Name = "fTinhTienLuong";
@@ -264,7 +265,7 @@ namespace QLChamCong
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Button btnXemCong;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Panel pnChiTietBangCong;
+        private System.Windows.Forms.Panel pnBangLuong;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
