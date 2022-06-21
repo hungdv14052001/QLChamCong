@@ -29,14 +29,14 @@ namespace QLChamCong
         }
         public void setData()
         {
-            DataColumn col1 = new DataColumn("MaNV");
-            DataColumn col2 = new DataColumn("Ho Ten");
-            DataColumn col3 = new DataColumn("Ngay Sinh");
-            DataColumn col4 = new DataColumn("Gioi Tinh");
-            DataColumn col5 = new DataColumn("Que Quan");
-            DataColumn col6 = new DataColumn("Dia chi");
-            DataColumn col7 = new DataColumn("Dien Thoai");
-            DataColumn col8 = new DataColumn("Email");
+            DataColumn col1 = new DataColumn("Mã NV");
+            DataColumn col2 = new DataColumn("Tên NV");
+            DataColumn col3 = new DataColumn("Số Ngày Làm");
+            DataColumn col4 = new DataColumn("Số Ngày Nghỉ");
+            DataColumn col5 = new DataColumn("HS Lương");
+            DataColumn col6 = new DataColumn("Lương CB");
+            DataColumn col7 = new DataColumn("Thưởng");
+            DataColumn col8 = new DataColumn("Phạt");
             DataColumn col9 = new DataColumn("Tổng");
 
             dataTable.Columns.Add(col1);
@@ -218,7 +218,7 @@ namespace QLChamCong
             cl9.Value2 = "Tổng";
             cl9.ColumnWidth = 25;
 
-            Microsoft.Office.Interop.Excel.Range rowHead = oSheet.get_Range("A3", "H3");
+            Microsoft.Office.Interop.Excel.Range rowHead = oSheet.get_Range("A3", "I3");
             rowHead.Font.Bold = true;
             //kẻ viền
             rowHead.Borders.LineStyle = Microsoft.Office.Interop.Excel.Constants.xlSolid;
@@ -259,7 +259,7 @@ namespace QLChamCong
         {
             if (isXuatBaoCao)
             {
-                ExportFile(dataTable, "Danh Sách", "Danh Sách Sinh Viên");
+                ExportFile(dataTable, "Bang luong", "BẢNG LƯƠNG");
             }
             else
             {
