@@ -102,6 +102,24 @@
     <Compile Include="fKhaiBao.Designer.cs">
       <DependentUpon>fKhaiBao.cs</DependentUpon>
     </Compile>
+    <Compile Include="fNhanVienBangLuong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fNhanVienBangLuong.Designer.cs">
+      <DependentUpon>fNhanVienBangLuong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fNhanVienChamCong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fNhanVienChamCong.Designer.cs">
+      <DependentUpon>fNhanVienChamCong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fNhanVienHoSo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fNhanVienHoSo.Designer.cs">
+      <DependentUpon>fNhanVienHoSo.cs</DependentUpon>
+    </Compile>
     <Compile Include="fQLChamCong.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -149,6 +167,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fKhaiBao.resx">
       <DependentUpon>fKhaiBao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fNhanVienBangLuong.resx">
+      <DependentUpon>fNhanVienBangLuong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fNhanVienChamCong.resx">
+      <DependentUpon>fNhanVienChamCong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fNhanVienHoSo.resx">
+      <DependentUpon>fNhanVienHoSo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fQLChamCong.resx">
       <DependentUpon>fQLChamCong.cs</DependentUpon>
