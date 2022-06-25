@@ -8,12 +8,13 @@ using System.Data.SqlClient;
 using System.Collections;
 using QLChamCong.Model;
 using System.Text.RegularExpressions;
+using System.Globalization;
 
 namespace QLChamCong.Controller
 {
     class DAO
     {
-        string str = @"Data Source=DESKTOP-LICKT66;Initial Catalog=QLChamCong;Integrated Security=True";
+        string str = @"Data Source=DESKTOP-FA5AISU\SQLEXPRESS;Initial Catalog=QLChamCong;Integrated Security=True";
         SqlConnection con;
         SqlCommand com = new SqlCommand();
         SqlDataAdapter dad = new SqlDataAdapter();
@@ -264,8 +265,8 @@ namespace QLChamCong.Controller
                 ChamCong cc = new ChamCong();
                 cc.MaCC = int.Parse(r["MaCC"].ToString());
                 cc.MaNV = int.Parse(r["MaNV"].ToString());
-                cc.TgDen = getDate(r["TGDen"].ToString());
-                cc.TgVe = getDate(r["TGDen"].ToString());
+                cc.TgDen = (DateTime)r["TGDen"];
+                cc.TgVe = (DateTime)r["TGVe"];
                 cc.NgayCham = getDate(r["NgayCham"].ToString());
                 listChamCong.Add(cc);
             }

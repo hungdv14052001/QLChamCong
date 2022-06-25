@@ -60,6 +60,12 @@
     <Compile Include="Control\ctTextBox.Designer.cs">
       <DependentUpon>ctTextBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="Dialog\dalMonthOfYear.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog\dalMonthOfYear.Designer.cs">
+      <DependentUpon>dalMonthOfYear.cs</DependentUpon>
+    </Compile>
     <Compile Include="fBaoCao.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,11 +90,35 @@
     <Compile Include="fHomePageA.Designer.cs">
       <DependentUpon>fHomePageA.cs</DependentUpon>
     </Compile>
+    <Compile Include="fHomePageNV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fHomePageNV.Designer.cs">
+      <DependentUpon>fHomePageNV.cs</DependentUpon>
+    </Compile>
     <Compile Include="fKhaiBao.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="fKhaiBao.Designer.cs">
       <DependentUpon>fKhaiBao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fNhanVienBangLuong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fNhanVienBangLuong.Designer.cs">
+      <DependentUpon>fNhanVienBangLuong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fNhanVienChamCong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fNhanVienChamCong.Designer.cs">
+      <DependentUpon>fNhanVienChamCong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fNhanVienHoSo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fNhanVienHoSo.Designer.cs">
+      <DependentUpon>fNhanVienHoSo.cs</DependentUpon>
     </Compile>
     <Compile Include="fQLChamCong.cs">
       <SubType>Form</SubType>
@@ -117,6 +147,9 @@
     <EmbeddedResource Include="Control\ctTextBox.resx">
       <DependentUpon>ctTextBox.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Dialog\dalMonthOfYear.resx">
+      <DependentUpon>dalMonthOfYear.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="fBaoCao.resx">
       <DependentUpon>fBaoCao.cs</DependentUpon>
     </EmbeddedResource>
@@ -129,8 +162,20 @@
     <EmbeddedResource Include="fHomePageA.resx">
       <DependentUpon>fHomePageA.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="fHomePageNV.resx">
+      <DependentUpon>fHomePageNV.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="fKhaiBao.resx">
       <DependentUpon>fKhaiBao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fNhanVienBangLuong.resx">
+      <DependentUpon>fNhanVienBangLuong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fNhanVienChamCong.resx">
+      <DependentUpon>fNhanVienChamCong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fNhanVienHoSo.resx">
+      <DependentUpon>fNhanVienHoSo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fQLChamCong.resx">
       <DependentUpon>fQLChamCong.cs</DependentUpon>
@@ -224,6 +269,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="imgNV\ảnh thẻ.jpg" />
+    <None Include="Resources\logout-icon.png" />
     <None Include="Resources\Business-Department-icon.png" />
     <None Include="Resources\App-Logo.png" />
     <None Include="Resources\User-Administrator-Blue-icon.png" />

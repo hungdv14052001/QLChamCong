@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QLChamCong.Dialog;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -13,7 +14,7 @@ namespace QLChamCong
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new fBaoCao());
+            Application.Run(new fDangNhap());
         }
     }
 }

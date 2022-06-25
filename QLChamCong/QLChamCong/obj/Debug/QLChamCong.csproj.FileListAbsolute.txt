@@ -34,3 +34,27 @@ D:\code github clone\Clone ChamCong\QLChamCong\QLChamCong\QLChamCong\obj\Debug\Q
 D:\code github clone\Clone ChamCong\QLChamCong\QLChamCong\QLChamCong\obj\Debug\QLChamCong.exe
 D:\code github clone\Clone ChamCong\QLChamCong\QLChamCong\QLChamCong\obj\Debug\QLChamCong.pdb
 D:\code github clone\Clone ChamCong\QLChamCong\QLChamCong\QLChamCong\obj\Debug\QLChamCong.fBaoCao.resources
+D:\clone Github\QLChamCong\QLChamCong\QLChamCong\bin\Debug\QLChamCong.exe.config
+D:\clone Github\QLChamCong\QLChamCong\QLChamCong\bin\Debug\QLChamCong.exe
+D:\clone Github\QLChamCong\QLChamCong\QLChamCong\bin\Debug\QLChamCong.pdb
+D:\clone Github\QLChamCong\QLChamCong\QLChamCong\obj\Debug\QLChamCong.csproj.AssemblyReference.cache
+D:\clone Github\QLChamCong\QLChamCong\QLChamCong\obj\Debug\QLChamCong.Control.ctTextBox.resources
+D:\clone Github\QLChamCong\QLChamCong\QLChamCong\obj\Debug\QLChamCong.fBaoCao.resources
+D:\clone Github\QLChamCong\QLChamCong\QLChamCong\obj\Debug\QLChamCong.fChamCong.resources
+D:\clone Github\QLChamCong\QLChamCong\QLChamCong\obj\Debug\QLChamCong.fDangNhap.resources
+D:\clone Github\QLChamCong\QLChamCong\QLChamCong\obj\Debug\QLChamCong.fHomePageA.resources
+D:\clone Github\QLChamCong\QLChamCong\QLChamCong\obj\Debug\QLChamCong.fKhaiBao.resources
+D:\clone Github\QLChamCong\QLChamCong\QLChamCong\obj\Debug\QLChamCong.fQLChamCong.resources
+D:\clone Github\QLChamCong\QLChamCong\QLChamCong\obj\Debug\QLChamCong.fQLNhanVien.resources
+D:\clone Github\QLChamCong\QLChamCong\QLChamCong\obj\Debug\QLChamCong.fTinhTienLuong.resources
+D:\clone Github\QLChamCong\QLChamCong\QLChamCong\obj\Debug\QLChamCong.Properties.Resources.resources
+D:\clone Github\QLChamCong\QLChamCong\QLChamCong\obj\Debug\QLChamCong.csproj.GenerateResource.cache
+D:\clone Github\QLChamCong\QLChamCong\QLChamCong\obj\Debug\QLChamCong.csproj.CoreCompileInputs.cache
+D:\clone Github\QLChamCong\QLChamCong\QLChamCong\obj\Debug\QLChamCong.exe
+D:\clone Github\QLChamCong\QLChamCong\QLChamCong\obj\Debug\QLChamCong.pdb
+D:\Code\Project\Các phương pháp pt pm nhanh\QLChamCong\QLChamCong\obj\Debug\QLChamCong.fBaoCao.resources
+D:\Code\Project\Các phương pháp pt pm nhanh\QLChamCong\QLChamCong\obj\Debug\QLChamCong.fHomePageNV.resources
+D:\Code\Project\Các phương pháp pt pm nhanh\QLChamCong\QLChamCong\obj\Debug\QLChamCong.fNhanVienChamCong.resources
+D:\Code\Project\Các phương pháp pt pm nhanh\QLChamCong\QLChamCong\obj\Debug\QLChamCong.Dialog.dalMonthOfYear.resources
+D:\Code\Project\Các phương pháp pt pm nhanh\QLChamCong\QLChamCong\obj\Debug\QLChamCong.fNhanVienBangLuong.resources
+D:\Code\Project\Các phương pháp pt pm nhanh\QLChamCong\QLChamCong\obj\Debug\QLChamCong.fNhanVienHoSo.resources

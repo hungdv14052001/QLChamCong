@@ -14,18 +14,22 @@ namespace QLChamCong
 {
     public partial class fDangNhap : Form
     {
-        string str = @"Data Source=DESKTOP-LICKT66;Initial Catalog=QLChamCong;Integrated Security=True";
+        string str = @"Data Source=DESKTOP-FA5AISU\SQLEXPRESS;Initial Catalog=QLChamCong;Integrated Security=True";
         SqlConnection con;
         SqlCommand com = new SqlCommand();
         SqlDataAdapter ada = new SqlDataAdapter();
         DataTable dtA = new DataTable();
         DataTable dtM = new DataTable();
-
+        int Ma = 0;
         Thread th;
 
         public void openHomePage(object obj)
         {
             Application.Run(new fHomePageA());
+        }
+        public void openHomePageM(object obj)
+        {
+            Application.Run(new fHomePageNV(this.Ma));
         }
         public fDangNhap()
         {
@@ -41,7 +45,7 @@ namespace QLChamCong
             ada.SelectCommand = com;
             ada.Fill(dtA);
             com = con.CreateCommand();
-            com.CommandText = "select * from tblNhanVien";
+            com.CommandText = "select * from tblTaiKhoan";
             ada.SelectCommand = com;
             ada.Fill(dtM);
         }
@@ -69,7 +73,26 @@ namespace QLChamCong
         }
         public void MemberDangNhap(string username, string password)
         {
-
+            bool DangNhap = false;
+            foreach (DataRow r in dtM.Rows)
+            {
+                if (username.Equals(r["Username"]) && password.Equals(r["Password"].ToString()))
+                {
+                    this.Ma = int.Parse(r["MaTK"].ToString());
+                    DangNhap = true;
+                }
+            }
+            if (DangNhap)
+            {
+                this.Close();
+                th = new Thread(openHomePageM);
+                th.SetApartmentState(ApartmentState.STA);
+                th.Start();
+            }
+            else
+            {
+                lbThongBao.Text = "Tài khoản hoặc mật khẩu không chính xác!";
+            }
         }
 
         private void btnLogin_Click(object sender, EventArgs e)

@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -17,7 +18,9 @@ namespace QLChamCong
         fQLChamCong fQLCC= new fQLChamCong() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
         fChamCong fCC = new fChamCong() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
         fTinhTienLuong fTTL= new fTinhTienLuong() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+        fBaoCao fBC= new fBaoCao() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
         List<Form> listform = new List<Form>();
+        Thread th;
         public fHomePageA()
         {
             InitializeComponent();
@@ -31,21 +34,23 @@ namespace QLChamCong
             fQLCC.FormBorderStyle = (FormBorderStyle)FormBorderStyle.None;
             fCC.FormBorderStyle = (FormBorderStyle)FormBorderStyle.None;
             fTTL.FormBorderStyle = (FormBorderStyle)FormBorderStyle.None;
+            fBC.FormBorderStyle = (FormBorderStyle)FormBorderStyle.None;
             this.pnView.Controls.Add(fQLNV);
             this.pnView.Controls.Add(fKB);
             this.pnView.Controls.Add(fQLCC);
             this.pnView.Controls.Add(fCC);
             this.pnView.Controls.Add(fTTL);
+            this.pnView.Controls.Add(fBC);
             listform.Add(fQLNV);
             listform.Add(fKB);
             listform.Add(fQLCC);
             listform.Add(fCC);
             listform.Add(fTTL);
+            listform.Add(fBC);
         }
         public void dongtrc()
         {
             pc.Hide();
-            lb.Hide();
             foreach(Form x in listform)
             {
                 x.Hide();
@@ -79,6 +84,24 @@ namespace QLChamCong
         {
             dongtrc();
             fTTL.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            dongtrc();
+            fBC.Show();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            th = new Thread(Logout);
+            th.SetApartmentState(ApartmentState.STA);
+            th.Start();
+        }
+        public void Logout(object obj)
+        {
+            Application.Run(new fDangNhap());
         }
     }
 }

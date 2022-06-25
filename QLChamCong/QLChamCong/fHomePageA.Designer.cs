@@ -41,19 +41,22 @@ namespace QLChamCong
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pnView = new System.Windows.Forms.Panel();
-            this.lb = new System.Windows.Forms.Label();
             this.pc = new System.Windows.Forms.PictureBox();
+            this.lb = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.button7 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnView.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pc)).BeginInit();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(55)))), ((int)(((byte)(61)))));
+            this.panel1.Controls.Add(this.button7);
             this.panel1.Controls.Add(this.button6);
             this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.button2);
@@ -172,6 +175,7 @@ namespace QLChamCong
             this.button4.Text = "Báo cáo";
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // panel2
             // 
@@ -215,41 +219,59 @@ namespace QLChamCong
             // pnView
             // 
             this.pnView.BackColor = System.Drawing.Color.White;
-            this.pnView.Controls.Add(this.lb);
             this.pnView.Controls.Add(this.pc);
             this.pnView.Location = new System.Drawing.Point(296, 132);
             this.pnView.Name = "pnView";
             this.pnView.Size = new System.Drawing.Size(1334, 860);
             this.pnView.TabIndex = 4;
             // 
+            // pc
+            // 
+            this.pc.Image = global::QLChamCong.Properties.Resources.App_Logo;
+            this.pc.Location = new System.Drawing.Point(413, 62);
+            this.pc.Name = "pc";
+            this.pc.Size = new System.Drawing.Size(500, 480);
+            this.pc.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pc.TabIndex = 6;
+            this.pc.TabStop = false;
+            // 
             // lb
             // 
             this.lb.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(79)))), ((int)(((byte)(79)))), ((int)(((byte)(79)))));
-            this.lb.Location = new System.Drawing.Point(4, 343);
+            this.lb.ForeColor = System.Drawing.Color.White;
+            this.lb.Location = new System.Drawing.Point(3, 7);
             this.lb.Name = "lb";
             this.lb.Size = new System.Drawing.Size(1328, 100);
             this.lb.TabIndex = 6;
             this.lb.Text = "PHẦN MỀM QUẢN LÝ CHẤM CÔNG";
             this.lb.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pc
-            // 
-            this.pc.Image = global::QLChamCong.Properties.Resources.App_Logo;
-            this.pc.Location = new System.Drawing.Point(559, 174);
-            this.pc.Name = "pc";
-            this.pc.Size = new System.Drawing.Size(220, 200);
-            this.pc.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pc.TabIndex = 6;
-            this.pc.TabStop = false;
-            // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(55)))), ((int)(((byte)(61)))));
+            this.panel4.Controls.Add(this.lb);
             this.panel4.Location = new System.Drawing.Point(296, 0);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1334, 123);
             this.panel4.TabIndex = 5;
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(55)))), ((int)(((byte)(61)))));
+            this.button7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button7.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(138)))), ((int)(((byte)(151)))));
+            this.button7.Image = global::QLChamCong.Properties.Resources.logout_icon;
+            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button7.Location = new System.Drawing.Point(3, 376);
+            this.button7.Name = "button7";
+            this.button7.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.button7.Size = new System.Drawing.Size(288, 56);
+            this.button7.TabIndex = 7;
+            this.button7.Text = "Đăng xuất";
+            this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // fHomePageA
             // 
@@ -271,6 +293,7 @@ namespace QLChamCong
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnView.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pc)).EndInit();
+            this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -292,5 +315,6 @@ namespace QLChamCong
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button7;
     }
 }
